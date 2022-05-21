@@ -1,0 +1,26 @@
+module acumulador7b(sinal, b,  cin, cout, clk, reset, Q, QB);
+	
+	input [0:6] b;
+	input cin, sinal;
+	output cout;
+	input clk;
+	input [0:6]  reset;
+	output [0:6] Q, QB;
+	wire [0:6] s;
+	wire auto, sclk;
+	not not0(sclk,clk);
+
+	somador_subtrator_complemto7b(sinal, Q, b,  cin, s, cout);
+	flipflopT(sclk, reset[0], s[0], Q[0], QB[0]);
+	flipflopT(sclk, reset[1], s[1], Q[1], QB[1]);
+	flipflopT(sclk, reset[2], s[2], Q[2], QB[2]);
+	flipflopT(sclk, reset[3], s[3], Q[3], QB[3]);
+	flipflopT(sclk, reset[4], s[4], Q[4], QB[4]);
+	flipflopT(sclk, reset[5], s[5], Q[5], QB[5]);
+	flipflopT(sclk, reset[6], s[6], Q[6], QB[6]);
+
+
+
+	
+	endmodule
+	

@@ -1,0 +1,15 @@
+module flipflopD(clk,reset,D,Q);
+
+	input clk, reset, D; 
+	output reg Q;
+  
+	always @ (posedge clk) begin  
+		if (reset) begin
+			Q <= 0;
+		end
+		else
+			Q <= D
+			
+	
+  end  
+endmodule  

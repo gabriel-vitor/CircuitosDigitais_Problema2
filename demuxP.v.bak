@@ -1,0 +1,33 @@
+module demuxP(x, clky, clkz, pd, pu, td, tu);
+	input x, clky, clkz;
+	output pd, pu, td, tu;
+	
+	x <= 0;
+	always @(clky and clkz, and x) begin
+		if(clky == 0 and clkz ==0) begin
+			pd <= x;
+			pu <= 1;
+			td <= 1;
+			tu <= 1;
+		end
+		else if(clky == 0 and clkz ==1) begin
+			pd <= 1;
+			pu <= x;
+			td <= 1;
+			tu <= 1;
+		end
+		else if(clky == 1 and clkz ==0) begin
+			pd <= 1;
+			pu <= 1;
+			td <= x;
+			tu <= 1;
+		end
+		else begin
+			pd <= 1;
+			pu <= 1;
+			td <= 1;
+			tu <= 0;
+		end
+	end
+endmodule 
+	

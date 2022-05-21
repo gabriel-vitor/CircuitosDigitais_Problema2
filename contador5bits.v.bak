@@ -1,0 +1,15 @@
+module contador5bits(T, clk, set, reset, Q, QB);
+	input T, clk;
+	input [0:4] set, reset;
+	output [0:4] Q, QB;
+	
+
+	flipflopT(clk,reset[0], T, Q[0], QB[0]);
+	flipflopT(QB[0], reset[1], T, Q[1], QB[1]);
+	flipflopT(QB[1], reset[2], T, Q[2], QB[2]);
+	flipflopT(QB[2], reset[3], T, Q[3], QB[3]);
+	flipflopT(QB[3], reset[4], T, Q[4], QB[4]);
+
+
+	
+endmodule

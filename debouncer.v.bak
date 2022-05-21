@@ -1,0 +1,12 @@
+module debouncer(clk,D,s);
+	input clk, D; 
+	output s;
+	wire Q[0:4];
+	
+	flipflopD(clk,0,D,Q[0]);
+	flipflopD(clk,0,Q[0],Q[1]);
+	flipflopD(clk,0,Q[1],Q[2]);
+	flipflopD(clk,0,Q[2],Q[3]);
+	flipflopD(clk,0,Q[3],Q[4]);
+	
+	and andD(s, Q[0], Q[1], Q[2], Q[3], Q[4]);

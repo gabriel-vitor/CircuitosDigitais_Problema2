@@ -1,0 +1,982 @@
+Analysis & Synthesis report for Problema2CD
+Fri May 20 15:01:50 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "demuxP:comb_42"
+ 11. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_20"
+ 12. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_19"
+ 13. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_18"
+ 14. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_17"
+ 15. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_16"
+ 16. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_15"
+ 17. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_14"
+ 18. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_13"
+ 19. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_12"
+ 20. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_11"
+ 21. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_10"
+ 22. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_9"
+ 23. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_8"
+ 24. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_7"
+ 25. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_6"
+ 26. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_5"
+ 27. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_4"
+ 28. Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_3"
+ 29. Port Connectivity Checks: "divisorFreq:comb_41"
+ 30. Port Connectivity Checks: "comparador_bcd_24_bits:comb_36"
+ 31. Port Connectivity Checks: "binario_bcd:comb_22"
+ 32. Port Connectivity Checks: "muxP:comb_21"
+ 33. Port Connectivity Checks: "muxP:comb_20"
+ 34. Port Connectivity Checks: "muxP:comb_19"
+ 35. Port Connectivity Checks: "muxP:comb_18"
+ 36. Port Connectivity Checks: "muxP:comb_17"
+ 37. Port Connectivity Checks: "muxP:comb_16"
+ 38. Port Connectivity Checks: "muxP:comb_15"
+ 39. Port Connectivity Checks: "contador5bits:comb_13|flipflopT:comb_7"
+ 40. Port Connectivity Checks: "contador5bits:comb_13|flipflopT:comb_6"
+ 41. Port Connectivity Checks: "contador5bits:comb_13"
+ 42. Port Connectivity Checks: "contador5bits14:comb_12|flipflopT:comb_6"
+ 43. Port Connectivity Checks: "contador5bits14:comb_12|flipflopT:comb_5"
+ 44. Port Connectivity Checks: "contador5bits14:comb_12|flipflopT:comb_4"
+ 45. Port Connectivity Checks: "contador5bits14:comb_12"
+ 46. Port Connectivity Checks: "acumulador7b:comb_11"
+ 47. Port Connectivity Checks: "debouncer:comb_10"
+ 48. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Fri May 20 15:01:50 2022       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; Problema2CD                                 ;
+; Top-level Entity Name       ; placar                                      ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 157                                         ;
+; Total pins                  ; 22                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EPM240T100C5       ;                    ;
+; Top-level entity name                                            ; placar             ; Problema2CD        ;
+; Family name                                                      ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------+---------+
+; contador5bits.v                  ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits.v                 ;         ;
+; acumulador7b.v                   ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/acumulador7b.v                  ;         ;
+; flipflopT.v                      ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/flipflopT.v                     ;         ;
+; comparador_bcd_8_bits.v          ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/comparador_bcd_8_bits.v         ;         ;
+; somador_subtrator_complemto1b.v  ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/somador_subtrator_complemto1b.v ;         ;
+; somador_subtrator_complemto7b.v  ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/somador_subtrator_complemto7b.v ;         ;
+; pontuar.v                        ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/pontuar.v                       ;         ;
+; comparador_bcd_24_bits.v         ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/comparador_bcd_24_bits.v        ;         ;
+; binario_bcd.v                    ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/binario_bcd.v                   ;         ;
+; bcd7segs.v                       ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/bcd7segs.v                      ;         ;
+; flipflopD.v                      ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/flipflopD.v                     ;         ;
+; placar.v                         ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v                        ;         ;
+; divisorFreq.v                    ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v                   ;         ;
+; debouncer.v                      ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/debouncer.v                     ;         ;
+; demuxP.v                         ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v                        ;         ;
+; muxP.v                           ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/muxP.v                          ;         ;
+; contador5bits14.v                ; yes             ; User Verilog HDL File  ; /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits14.v               ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                           ;
++---------------------------------------------+-----------------------------------------+
+; Resource                                    ; Usage                                   ;
++---------------------------------------------+-----------------------------------------+
+; Total logic elements                        ; 157                                     ;
+;     -- Combinational with no register       ; 122                                     ;
+;     -- Register only                        ; 0                                       ;
+;     -- Combinational with a register        ; 35                                      ;
+;                                             ;                                         ;
+; Logic element usage by number of LUT inputs ;                                         ;
+;     -- 4 input functions                    ; 96                                      ;
+;     -- 3 input functions                    ; 20                                      ;
+;     -- 2 input functions                    ; 13                                      ;
+;     -- 1 input functions                    ; 28                                      ;
+;     -- 0 input functions                    ; 0                                       ;
+;                                             ;                                         ;
+; Logic elements by mode                      ;                                         ;
+;     -- normal mode                          ; 157                                     ;
+;     -- arithmetic mode                      ; 0                                       ;
+;     -- qfbk mode                            ; 0                                       ;
+;     -- register cascade mode                ; 0                                       ;
+;     -- synchronous clear/load mode          ; 0                                       ;
+;     -- asynchronous clear/load mode         ; 5                                       ;
+;                                             ;                                         ;
+; Total registers                             ; 35                                      ;
+; I/O pins                                    ; 22                                      ;
+; Maximum fan-out node                        ; acumulador7b:comb_11|flipflopD:comb_8|Q ;
+; Maximum fan-out                             ; 20                                      ;
+; Total fan-out                               ; 561                                     ;
+; Average fan-out                             ; 3.13                                    ;
++---------------------------------------------+-----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                          ;
++-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------+-------------------------------+--------------+
+; Compilation Hierarchy Node                      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                    ; Entity Name                   ; Library Name ;
++-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------+-------------------------------+--------------+
+; |placar                                         ; 157 (1)     ; 35           ; 0          ; 22   ; 0            ; 122 (1)      ; 0 (0)             ; 35 (0)           ; 0 (0)           ; 0 (0)      ; |placar                                                                                                ; placar                        ; work         ;
+;    |acumulador7b:comb_11|                       ; 12 (0)      ; 7            ; 0          ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 7 (0)            ; 0 (0)           ; 0 (0)      ; |placar|acumulador7b:comb_11                                                                           ; acumulador7b                  ; work         ;
+;       |flipflopD:comb_10|                       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|acumulador7b:comb_11|flipflopD:comb_10                                                         ; flipflopD                     ; work         ;
+;       |flipflopD:comb_4|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|acumulador7b:comb_11|flipflopD:comb_4                                                          ; flipflopD                     ; work         ;
+;       |flipflopD:comb_5|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|acumulador7b:comb_11|flipflopD:comb_5                                                          ; flipflopD                     ; work         ;
+;       |flipflopD:comb_6|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|acumulador7b:comb_11|flipflopD:comb_6                                                          ; flipflopD                     ; work         ;
+;       |flipflopD:comb_7|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|acumulador7b:comb_11|flipflopD:comb_7                                                          ; flipflopD                     ; work         ;
+;       |flipflopD:comb_8|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|acumulador7b:comb_11|flipflopD:comb_8                                                          ; flipflopD                     ; work         ;
+;       |flipflopD:comb_9|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|acumulador7b:comb_11|flipflopD:comb_9                                                          ; flipflopD                     ; work         ;
+;       |somador_subtrator_complemto7b:comb_3|    ; 5 (0)       ; 0            ; 0          ; 0    ; 0            ; 5 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|acumulador7b:comb_11|somador_subtrator_complemto7b:comb_3                                      ; somador_subtrator_complemto7b ; work         ;
+;          |somador_subtrator_complemto1b:comb_3| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|acumulador7b:comb_11|somador_subtrator_complemto7b:comb_3|somador_subtrator_complemto1b:comb_3 ; somador_subtrator_complemto1b ; work         ;
+;          |somador_subtrator_complemto1b:comb_4| ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|acumulador7b:comb_11|somador_subtrator_complemto7b:comb_3|somador_subtrator_complemto1b:comb_4 ; somador_subtrator_complemto1b ; work         ;
+;          |somador_subtrator_complemto1b:comb_5| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|acumulador7b:comb_11|somador_subtrator_complemto7b:comb_3|somador_subtrator_complemto1b:comb_5 ; somador_subtrator_complemto1b ; work         ;
+;          |somador_subtrator_complemto1b:comb_7| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|acumulador7b:comb_11|somador_subtrator_complemto7b:comb_3|somador_subtrator_complemto1b:comb_7 ; somador_subtrator_complemto1b ; work         ;
+;    |bcd7segs:comb_37|                           ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|bcd7segs:comb_37                                                                               ; bcd7segs                      ; work         ;
+;    |bcd7segs:comb_38|                           ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|bcd7segs:comb_38                                                                               ; bcd7segs                      ; work         ;
+;    |bcd7segs:comb_39|                           ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|bcd7segs:comb_39                                                                               ; bcd7segs                      ; work         ;
+;    |bcd7segs:comb_40|                           ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|bcd7segs:comb_40                                                                               ; bcd7segs                      ; work         ;
+;    |binario_bcd:comb_22|                        ; 33 (33)     ; 0            ; 0          ; 0    ; 0            ; 33 (33)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|binario_bcd:comb_22                                                                            ; binario_bcd                   ; work         ;
+;    |binario_bcd:comb_23|                        ; 26 (26)     ; 0            ; 0          ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|binario_bcd:comb_23                                                                            ; binario_bcd                   ; work         ;
+;    |comparador_bcd_24_bits:comb_36|             ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|comparador_bcd_24_bits:comb_36                                                                 ; comparador_bcd_24_bits        ; work         ;
+;    |contador5bits14:comb_12|                    ; 8 (3)       ; 5            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |placar|contador5bits14:comb_12                                                                        ; contador5bits14               ; work         ;
+;       |flipflopT:comb_3|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|contador5bits14:comb_12|flipflopT:comb_3                                                       ; flipflopT                     ; work         ;
+;       |flipflopT:comb_4|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|contador5bits14:comb_12|flipflopT:comb_4                                                       ; flipflopT                     ; work         ;
+;       |flipflopT:comb_5|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|contador5bits14:comb_12|flipflopT:comb_5                                                       ; flipflopT                     ; work         ;
+;       |flipflopT:comb_6|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|contador5bits14:comb_12|flipflopT:comb_6                                                       ; flipflopT                     ; work         ;
+;       |flipflopT:comb_7|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|contador5bits14:comb_12|flipflopT:comb_7                                                       ; flipflopT                     ; work         ;
+;    |contador5bits:comb_13|                      ; 7 (2)       ; 5            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 5 (0)            ; 0 (0)           ; 0 (0)      ; |placar|contador5bits:comb_13                                                                          ; contador5bits                 ; work         ;
+;       |flipflopT:comb_3|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|contador5bits:comb_13|flipflopT:comb_3                                                         ; flipflopT                     ; work         ;
+;       |flipflopT:comb_4|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|contador5bits:comb_13|flipflopT:comb_4                                                         ; flipflopT                     ; work         ;
+;       |flipflopT:comb_5|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|contador5bits:comb_13|flipflopT:comb_5                                                         ; flipflopT                     ; work         ;
+;       |flipflopT:comb_6|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|contador5bits:comb_13|flipflopT:comb_6                                                         ; flipflopT                     ; work         ;
+;       |flipflopT:comb_7|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|contador5bits:comb_13|flipflopT:comb_7                                                         ; flipflopT                     ; work         ;
+;    |demuxP:comb_42|                             ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|demuxP:comb_42                                                                                 ; demuxP                        ; work         ;
+;    |divisorFreq:comb_41|                        ; 18 (0)      ; 18           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 18 (0)           ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41                                                                            ; divisorFreq                   ; work         ;
+;       |flipflopT:comb_10|                       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_10                                                          ; flipflopT                     ; work         ;
+;       |flipflopT:comb_11|                       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_11                                                          ; flipflopT                     ; work         ;
+;       |flipflopT:comb_12|                       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_12                                                          ; flipflopT                     ; work         ;
+;       |flipflopT:comb_13|                       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_13                                                          ; flipflopT                     ; work         ;
+;       |flipflopT:comb_14|                       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_14                                                          ; flipflopT                     ; work         ;
+;       |flipflopT:comb_15|                       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_15                                                          ; flipflopT                     ; work         ;
+;       |flipflopT:comb_16|                       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_16                                                          ; flipflopT                     ; work         ;
+;       |flipflopT:comb_17|                       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_17                                                          ; flipflopT                     ; work         ;
+;       |flipflopT:comb_18|                       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_18                                                          ; flipflopT                     ; work         ;
+;       |flipflopT:comb_19|                       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_19                                                          ; flipflopT                     ; work         ;
+;       |flipflopT:comb_20|                       ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_20                                                          ; flipflopT                     ; work         ;
+;       |flipflopT:comb_3|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_3                                                           ; flipflopT                     ; work         ;
+;       |flipflopT:comb_4|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_4                                                           ; flipflopT                     ; work         ;
+;       |flipflopT:comb_5|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_5                                                           ; flipflopT                     ; work         ;
+;       |flipflopT:comb_6|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_6                                                           ; flipflopT                     ; work         ;
+;       |flipflopT:comb_7|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_7                                                           ; flipflopT                     ; work         ;
+;       |flipflopT:comb_8|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_8                                                           ; flipflopT                     ; work         ;
+;       |flipflopT:comb_9|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |placar|divisorFreq:comb_41|flipflopT:comb_9                                                           ; flipflopT                     ; work         ;
+;    |muxP:comb_17|                               ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|muxP:comb_17                                                                                   ; muxP                          ; work         ;
+;    |muxP:comb_18|                               ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|muxP:comb_18                                                                                   ; muxP                          ; work         ;
+;    |muxP:comb_19|                               ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|muxP:comb_19                                                                                   ; muxP                          ; work         ;
+;    |muxP:comb_20|                               ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|muxP:comb_20                                                                                   ; muxP                          ; work         ;
+;    |muxP:comb_21|                               ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|muxP:comb_21                                                                                   ; muxP                          ; work         ;
+;    |muxP:comb_43|                               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|muxP:comb_43                                                                                   ; muxP                          ; work         ;
+;    |muxP:comb_44|                               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|muxP:comb_44                                                                                   ; muxP                          ; work         ;
+;    |muxP:comb_45|                               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|muxP:comb_45                                                                                   ; muxP                          ; work         ;
+;    |muxP:comb_46|                               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|muxP:comb_46                                                                                   ; muxP                          ; work         ;
+;    |muxP:comb_47|                               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|muxP:comb_47                                                                                   ; muxP                          ; work         ;
+;    |muxP:comb_48|                               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|muxP:comb_48                                                                                   ; muxP                          ; work         ;
+;    |muxP:comb_49|                               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|muxP:comb_49                                                                                   ; muxP                          ; work         ;
+;    |pontuar:comb_8|                             ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |placar|pontuar:comb_8                                                                                 ; pontuar                       ; work         ;
++-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------+-------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 35    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 10    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |placar|muxP:comb_45|s     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "demuxP:comb_42"                                                                                                                                                                    ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; x     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; x[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_20"                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_19"                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_18"                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_17"                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_16"                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_15"                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_14"                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_13"                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_12"                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_11"                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_10"                                                                                                                                                 ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_9"                                                                                                                                                  ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_8"                                                                                                                                                  ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_7"                                                                                                                                                  ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_6"                                                                                                                                                  ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_5"                                                                                                                                                  ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_4"                                                                                                                                                  ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41|flipflopT:comb_3"                                                                                                                                                  ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; T         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; T[-1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisorFreq:comb_41"                                                                     ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Q[0..16]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; QB[0..15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; QB[17]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "comparador_bcd_24_bits:comb_36" ;
++------------+-------+----------+----------------------------+
+; Port       ; Type  ; Severity ; Details                    ;
++------------+-------+----------+----------------------------+
+; num1[3..4] ; Input ; Info     ; Stuck at VCC               ;
+; num1[0]    ; Input ; Info     ; Stuck at VCC               ;
+; num1[7]    ; Input ; Info     ; Stuck at VCC               ;
++------------+-------+----------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "binario_bcd:comb_22"                                                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; s0   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; s1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; s2   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; s3   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "muxP:comb_21"                                                                                                                                                                      ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; x     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; x[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; y     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; y[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "muxP:comb_20"                                                                                                                                                                      ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; x     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; x[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; y     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; y[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "muxP:comb_19"                                                                                                                                                                      ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; x     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; x[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; y     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; y[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "muxP:comb_18"                                                                                                                                                                      ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; x     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; x[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; y     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; y[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "muxP:comb_17"                                                                                                                                                                      ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; x     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; x[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; y     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; y[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "muxP:comb_16"                                                                                                                                                                      ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; x     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; x[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; y     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; y[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "muxP:comb_15"                                                                                                                                                                      ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; x     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; x[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; y     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; y[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contador5bits:comb_13|flipflopT:comb_7"                                                                                                                                                ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contador5bits:comb_13|flipflopT:comb_6"                                                                                                                                                ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contador5bits:comb_13"                                                                                                                                                    ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                               ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Q        ; Output ; Warning  ; Output or bidir port (5 bits) is smaller than the port expression (7 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
+; QB       ; Output ; Warning  ; Output or bidir port (5 bits) is smaller than the port expression (7 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
+; QB[0..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contador5bits14:comb_12|flipflopT:comb_6"                                                                                                                                              ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contador5bits14:comb_12|flipflopT:comb_5"                                                                                                                                              ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contador5bits14:comb_12|flipflopT:comb_4"                                                                                                                                              ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++-----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contador5bits14:comb_12"                                                                                                                                                  ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                                                                               ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Q        ; Output ; Warning  ; Output or bidir port (5 bits) is smaller than the port expression (7 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
+; QB       ; Output ; Warning  ; Output or bidir port (5 bits) is smaller than the port expression (7 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
+; QB[0..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
++----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "acumulador7b:comb_11"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "debouncer:comb_10"                                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; s    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Fri May 20 15:01:44 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Problema2CD -c Problema2CD
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file contador5bits.v
+    Info (12023): Found entity 1: contador5bits File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file acumulador7b.v
+    Info (12023): Found entity 1: acumulador7b File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/acumulador7b.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file flipflopT.v
+    Info (12023): Found entity 1: flipflopT File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/flipflopT.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file comparador_bcd_8_bits.v
+    Info (12023): Found entity 1: comparador_bcd_8_bits File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/comparador_bcd_8_bits.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file somador_subtrator_complemto1b.v
+    Info (12023): Found entity 1: somador_subtrator_complemto1b File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/somador_subtrator_complemto1b.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file somador_subtrator_complemto7b.v
+    Info (12023): Found entity 1: somador_subtrator_complemto7b File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/somador_subtrator_complemto7b.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pontuar.v
+    Info (12023): Found entity 1: pontuar File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/pontuar.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file comparador_bcd_24_bits.v
+    Info (12023): Found entity 1: comparador_bcd_24_bits File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/comparador_bcd_24_bits.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file binario_bcd.v
+    Info (12023): Found entity 1: binario_bcd File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/binario_bcd.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bcd7segs.v
+    Info (12023): Found entity 1: bcd7segs File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/bcd7segs.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file flipflopD.v
+    Info (12023): Found entity 1: flipflopD File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/flipflopD.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file placar.v
+    Info (12023): Found entity 1: placar File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file divisorFreq.v
+    Info (12023): Found entity 1: divisorFreq File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file debouncer.v
+    Info (12023): Found entity 1: debouncer File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/debouncer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file demuxP.v
+    Info (12023): Found entity 1: demuxP File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file muxP.v
+    Info (12023): Found entity 1: muxP File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/muxP.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contador5bits14.v
+    Info (12023): Found entity 1: contador5bits14 File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits14.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at pontuar.v(7): created implicit net for "inv0" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/pontuar.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at pontuar.v(8): created implicit net for "inv1" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/pontuar.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at pontuar.v(9): created implicit net for "inv2" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/pontuar.v Line: 9
+Critical Warning (10846): Verilog HDL Instantiation warning at contador5bits.v(10): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at contador5bits.v(11): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at contador5bits.v(12): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at contador5bits.v(13): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at contador5bits.v(14): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at somador_subtrator_complemto7b.v(11): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/somador_subtrator_complemto7b.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at somador_subtrator_complemto7b.v(12): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/somador_subtrator_complemto7b.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at somador_subtrator_complemto7b.v(13): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/somador_subtrator_complemto7b.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at somador_subtrator_complemto7b.v(14): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/somador_subtrator_complemto7b.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at somador_subtrator_complemto7b.v(15): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/somador_subtrator_complemto7b.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at somador_subtrator_complemto7b.v(16): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/somador_subtrator_complemto7b.v Line: 16
+Critical Warning (10846): Verilog HDL Instantiation warning at somador_subtrator_complemto7b.v(17): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/somador_subtrator_complemto7b.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at acumulador7b.v(10): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/acumulador7b.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at acumulador7b.v(12): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/acumulador7b.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at acumulador7b.v(13): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/acumulador7b.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at acumulador7b.v(14): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/acumulador7b.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at acumulador7b.v(15): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/acumulador7b.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at acumulador7b.v(16): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/acumulador7b.v Line: 16
+Critical Warning (10846): Verilog HDL Instantiation warning at acumulador7b.v(17): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/acumulador7b.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at acumulador7b.v(18): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/acumulador7b.v Line: 18
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(32): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 32
+Critical Warning (10846): Verilog HDL Instantiation warning at debouncer.v(6): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/debouncer.v Line: 6
+Critical Warning (10846): Verilog HDL Instantiation warning at debouncer.v(7): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/debouncer.v Line: 7
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(34): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 34
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(39): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 39
+Critical Warning (10846): Verilog HDL Instantiation warning at contador5bits14.v(10): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits14.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at contador5bits14.v(11): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits14.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at contador5bits14.v(12): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits14.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at contador5bits14.v(13): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits14.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at contador5bits14.v(14): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits14.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(51): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 51
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(52): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 52
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(56): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 56
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(57): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 57
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(58): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 58
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(59): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 59
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(60): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 60
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(61): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 61
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(62): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 62
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(73): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 73
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(75): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 75
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(92): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 92
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(95): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 95
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(96): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 96
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(99): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 99
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(100): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 100
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(7): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 7
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(8): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(9): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 9
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(10): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(11): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 11
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(12): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 12
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(13): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 13
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(14): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(15): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(16): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 16
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(17): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(18): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 18
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(19): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 19
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(20): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 20
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(21): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 21
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(22): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 22
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(23): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 23
+Critical Warning (10846): Verilog HDL Instantiation warning at divisorFreq.v(24): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/divisorFreq.v Line: 24
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(104): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 104
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(106): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 106
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(112): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 112
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(113): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 113
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(114): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 114
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(115): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 115
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(116): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 116
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(117): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 117
+Critical Warning (10846): Verilog HDL Instantiation warning at placar.v(118): instance has no name File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 118
+Info (12127): Elaborating entity "placar" for the top level hierarchy
+Warning (10739): Verilog HDL warning at placar.v(20): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 20
+Warning (10739): Verilog HDL warning at placar.v(21): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 21
+Warning (10739): Verilog HDL warning at placar.v(22): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 22
+Warning (10739): Verilog HDL warning at placar.v(23): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 23
+Info (12128): Elaborating entity "pontuar" for hierarchy "pontuar:comb_8" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 32
+Info (12128): Elaborating entity "debouncer" for hierarchy "debouncer:comb_10" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 34
+Info (12128): Elaborating entity "flipflopD" for hierarchy "debouncer:comb_10|flipflopD:comb_3" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/debouncer.v Line: 6
+Info (12128): Elaborating entity "acumulador7b" for hierarchy "acumulador7b:comb_11" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 39
+Info (12128): Elaborating entity "somador_subtrator_complemto7b" for hierarchy "acumulador7b:comb_11|somador_subtrator_complemto7b:comb_3" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/acumulador7b.v Line: 10
+Info (12128): Elaborating entity "somador_subtrator_complemto1b" for hierarchy "acumulador7b:comb_11|somador_subtrator_complemto7b:comb_3|somador_subtrator_complemto1b:comb_3" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/somador_subtrator_complemto7b.v Line: 11
+Info (12128): Elaborating entity "contador5bits14" for hierarchy "contador5bits14:comb_12" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 51
+Info (12128): Elaborating entity "flipflopT" for hierarchy "contador5bits14:comb_12|flipflopT:comb_3" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/contador5bits14.v Line: 10
+Critical Warning (10237): Verilog HDL warning at flipflopT.v(18): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/flipflopT.v Line: 18
+Info (12128): Elaborating entity "contador5bits" for hierarchy "contador5bits:comb_13" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 52
+Info (12128): Elaborating entity "muxP" for hierarchy "muxP:comb_15" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 56
+Warning (10240): Verilog HDL Always Construct warning at muxP.v(6): inferring latch(es) for variable "s", which holds its previous value in one or more paths through the always construct File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/muxP.v Line: 6
+Info (10041): Inferred latch for "s" at muxP.v(6) File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/muxP.v Line: 6
+Info (12128): Elaborating entity "binario_bcd" for hierarchy "binario_bcd:comb_22" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 73
+Warning (10027): Verilog HDL or VHDL warning at the binario_bcd.v(97): index expression is not wide enough to address all of the elements in the array File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/binario_bcd.v Line: 97
+Warning (10034): Output port "s0" at binario_bcd.v(3) has no driver File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/binario_bcd.v Line: 3
+Warning (10034): Output port "s1" at binario_bcd.v(3) has no driver File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/binario_bcd.v Line: 3
+Warning (10034): Output port "s2" at binario_bcd.v(3) has no driver File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/binario_bcd.v Line: 3
+Info (12128): Elaborating entity "comparador_bcd_24_bits" for hierarchy "comparador_bcd_24_bits:comb_36" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 92
+Info (12128): Elaborating entity "comparador_bcd_8_bits" for hierarchy "comparador_bcd_24_bits:comb_36|comparador_bcd_8_bits:centena" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/comparador_bcd_24_bits.v Line: 19
+Info (12128): Elaborating entity "bcd7segs" for hierarchy "bcd7segs:comb_37" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 95
+Info (12128): Elaborating entity "divisorFreq" for hierarchy "divisorFreq:comb_41" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 104
+Info (12128): Elaborating entity "demuxP" for hierarchy "demuxP:comb_42" File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 106
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(9): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 9
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(10): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 10
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(11): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 11
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(12): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 12
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(15): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 15
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(16): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 16
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(17): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 17
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(18): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 18
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(23): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 23
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(24): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 24
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(25): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 25
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(26): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 26
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(29): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 29
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(30): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 30
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(31): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 31
+Warning (10235): Verilog HDL Always Construct warning at demuxP.v(32): variable "x" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 32
+Warning (10240): Verilog HDL Always Construct warning at demuxP.v(6): inferring latch(es) for variable "pd", which holds its previous value in one or more paths through the always construct File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 6
+Warning (10240): Verilog HDL Always Construct warning at demuxP.v(6): inferring latch(es) for variable "pu", which holds its previous value in one or more paths through the always construct File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 6
+Warning (10240): Verilog HDL Always Construct warning at demuxP.v(6): inferring latch(es) for variable "td", which holds its previous value in one or more paths through the always construct File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 6
+Warning (10240): Verilog HDL Always Construct warning at demuxP.v(6): inferring latch(es) for variable "tu", which holds its previous value in one or more paths through the always construct File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 6
+Info (10041): Inferred latch for "tu" at demuxP.v(6) File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 6
+Info (10041): Inferred latch for "td" at demuxP.v(6) File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 6
+Info (10041): Inferred latch for "pu" at demuxP.v(6) File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 6
+Info (10041): Inferred latch for "pd" at demuxP.v(6) File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/demuxP.v Line: 6
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "vintA[0]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+    Warning (12110): Net "vintA[1]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "quartA[0]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+    Warning (12110): Net "quartA[1]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+    Warning (12110): Net "vintA[0]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+    Warning (12110): Net "vintA[1]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "quartA[0]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+    Warning (12110): Net "quartA[1]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+    Warning (12110): Net "vintA[0]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+    Warning (12110): Net "vintA[1]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "quartA[0]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+    Warning (12110): Net "quartA[1]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+    Warning (12110): Net "vintA[0]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+    Warning (12110): Net "vintA[1]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "quartA[0]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+    Warning (12110): Net "quartA[1]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+    Warning (12110): Net "vintA[0]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+    Warning (12110): Net "vintA[1]" is missing source, defaulting to GND File: /home/aluno/Documentos/Problema 2 - Atualizado/problema2/placar.v Line: 43
+Info (13014): Ignored 9 buffer(s)
+    Info (13019): Ignored 9 SOFT buffer(s)
+Warning (12241): 33 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (21057): Implemented 179 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 13 output pins
+    Info (21061): Implemented 157 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 131 warnings
+    Info: Peak virtual memory: 341 megabytes
+    Info: Processing ended: Fri May 20 15:01:50 2022
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:12
+
+

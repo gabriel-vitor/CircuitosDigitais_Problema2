@@ -1,0 +1,361 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clkG'
+Slack : -3.883
+TNS   : -21.996
+
+Type  : Setup 'contador5bits14:comb_12|flipflopT:comb_6|Q'
+Slack : -1.512
+TNS   : -1.512
+
+Type  : Setup 'contador5bits:comb_13|flipflopT:comb_6|Q'
+Slack : -1.482
+TNS   : -1.482
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_19|Q'
+Slack : -1.193
+TNS   : -1.193
+
+Type  : Setup 'contador5bits:comb_13|flipflopT:comb_3|Q'
+Slack : 0.213
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_11|Q'
+Slack : 0.457
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_13|Q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_3|Q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_9|Q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_15|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_17|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_5|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_7|Q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'contador5bits14:comb_12|flipflopT:comb_5|Q'
+Slack : 0.487
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_18|Q'
+Slack : 0.788
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_6|Q'
+Slack : 0.808
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_10|Q'
+Slack : 0.816
+TNS   : 0.000
+
+Type  : Setup 'contador5bits:comb_13|flipflopT:comb_4|Q'
+Slack : 0.825
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_16|Q'
+Slack : 0.828
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_14|Q'
+Slack : 0.833
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_4|Q'
+Slack : 0.853
+TNS   : 0.000
+
+Type  : Setup 'contador5bits14:comb_12|flipflopT:comb_4|Q'
+Slack : 0.880
+TNS   : 0.000
+
+Type  : Setup 'contador5bits14:comb_12|flipflopT:comb_3|Q'
+Slack : 0.978
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_12|Q'
+Slack : 1.229
+TNS   : 0.000
+
+Type  : Setup 'divisorFreq:comb_41|flipflopT:comb_8|Q'
+Slack : 1.256
+TNS   : 0.000
+
+Type  : Setup 'contador5bits:comb_13|flipflopT:comb_5|Q'
+Slack : 1.416
+TNS   : 0.000
+
+Type  : Setup 'clk'
+Slack : 2.896
+TNS   : 0.000
+
+Type  : Hold 'clkG'
+Slack : -4.133
+TNS   : -7.503
+
+Type  : Hold 'clk'
+Slack : -2.950
+TNS   : -2.950
+
+Type  : Hold 'contador5bits:comb_13|flipflopT:comb_5|Q'
+Slack : -1.470
+TNS   : -1.470
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_8|Q'
+Slack : -1.310
+TNS   : -1.310
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_12|Q'
+Slack : -1.283
+TNS   : -1.283
+
+Type  : Hold 'contador5bits14:comb_12|flipflopT:comb_3|Q'
+Slack : -1.032
+TNS   : -1.032
+
+Type  : Hold 'contador5bits14:comb_12|flipflopT:comb_4|Q'
+Slack : -0.934
+TNS   : -0.934
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_4|Q'
+Slack : -0.907
+TNS   : -0.907
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_14|Q'
+Slack : -0.887
+TNS   : -0.887
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_16|Q'
+Slack : -0.882
+TNS   : -0.882
+
+Type  : Hold 'contador5bits:comb_13|flipflopT:comb_4|Q'
+Slack : -0.879
+TNS   : -0.879
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_10|Q'
+Slack : -0.870
+TNS   : -0.870
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_6|Q'
+Slack : -0.862
+TNS   : -0.862
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_18|Q'
+Slack : -0.842
+TNS   : -0.842
+
+Type  : Hold 'contador5bits14:comb_12|flipflopT:comb_5|Q'
+Slack : -0.541
+TNS   : -0.541
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_15|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_17|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_5|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_7|Q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_13|Q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_3|Q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_9|Q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_11|Q'
+Slack : -0.511
+TNS   : -0.511
+
+Type  : Hold 'contador5bits:comb_13|flipflopT:comb_3|Q'
+Slack : -0.267
+TNS   : -0.267
+
+Type  : Hold 'divisorFreq:comb_41|flipflopT:comb_19|Q'
+Slack : 1.639
+TNS   : 0.000
+
+Type  : Hold 'contador5bits:comb_13|flipflopT:comb_6|Q'
+Slack : 1.928
+TNS   : 0.000
+
+Type  : Hold 'contador5bits14:comb_12|flipflopT:comb_6|Q'
+Slack : 1.958
+TNS   : 0.000
+
+Type  : Recovery 'contador5bits14:comb_12|flipflopT:comb_6|Q'
+Slack : -7.524
+TNS   : -7.524
+
+Type  : Recovery 'contador5bits:comb_13|flipflopT:comb_3|Q'
+Slack : -5.686
+TNS   : -5.686
+
+Type  : Recovery 'contador5bits:comb_13|flipflopT:comb_4|Q'
+Slack : -5.360
+TNS   : -5.360
+
+Type  : Recovery 'clkG'
+Slack : -4.838
+TNS   : -6.645
+
+Type  : Removal 'clkG'
+Slack : 0.921
+TNS   : 0.000
+
+Type  : Removal 'contador5bits:comb_13|flipflopT:comb_4|Q'
+Slack : 4.474
+TNS   : 0.000
+
+Type  : Removal 'contador5bits14:comb_12|flipflopT:comb_6|Q'
+Slack : 4.731
+TNS   : 0.000
+
+Type  : Removal 'contador5bits:comb_13|flipflopT:comb_3|Q'
+Slack : 4.800
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'clkG'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'contador5bits14:comb_12|flipflopT:comb_3|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'contador5bits14:comb_12|flipflopT:comb_4|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'contador5bits14:comb_12|flipflopT:comb_5|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'contador5bits14:comb_12|flipflopT:comb_6|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'contador5bits:comb_13|flipflopT:comb_3|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'contador5bits:comb_13|flipflopT:comb_4|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'contador5bits:comb_13|flipflopT:comb_5|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'contador5bits:comb_13|flipflopT:comb_6|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_10|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_11|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_12|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_13|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_14|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_15|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_16|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_17|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_18|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_19|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_3|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_4|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_5|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_6|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_7|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_8|Q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisorFreq:comb_41|flipflopT:comb_9|Q'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------
